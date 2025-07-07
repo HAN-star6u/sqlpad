@@ -44,10 +44,10 @@ WORKDIR /sqlpad
 COPY . .
 
 # Build front-end and copy files into server public dir
-RUN npm run build --prefix client && \
-    rm -rf server/public && \
-    mkdir server/public && \
-    cp -r client/build/* server/public
+#RUN npm run build --prefix client && \
+#   rm -rf server/public && \
+#   mkdir server/public && \
+#   cp -r client/build/* server/public
 
 # Start another stage with a fresh node
 # Copy the server directory that has all the necessary node modules + front end build
